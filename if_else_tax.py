@@ -27,7 +27,7 @@ if income < trshold:
 	tax = income * 0.18 - 556.02
 	if tax < 0:
 		tax = 0.0
-elif income > trshold:
+else:
 	tax = (14839.02) + (0.32 * (income - 85528)) 
 
 tax = round(tax, 1)
