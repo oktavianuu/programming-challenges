@@ -20,14 +20,15 @@ We also want you to count the steps needed to achieve the goal. Your code should
 of c0, too.
 """
 c0 = int(input("Enter non-zero and non-negative integer: "))
-
-while c0:
-    if c0 % 2 == 0: # if c0 even
+steps = 0
+while c0 != 1:
+    if c0 % 2 == 0:
         c0 = c0 // 2
-    elif c0 != 1: # if c0 != 1
-        c0 = c0 // 2
-    else: # if c0 odd
+    elif c0 % 2 != 0:
         c0 = 3 * c0 + 1
+    elif c0 != 1:
+        c0 = c0 // 2
+
     print(c0)
-    c0 -= c0
-print("Steps: ", c0)
+    steps += 1
+print("Steps: ", steps)
